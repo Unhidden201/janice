@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website Portfolio - Janice Calope</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="header">
+        
+
+        <div>
+            <ul id="navbar">
+                <li><a href="#main">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>           
+                <li><a href="#contact">Contact</a></li>
+                <i class='bx bx-x' id="close"></i>
+            </ul>
+            <i class='bx bx-menu' id="bar"></i>
+        </div>
+    </div>
+
+    <div id="main">
+        <h1>Hello. I'm Janice R. Calope.</h1>
+        <h1><span>A 3rd Year Computer Science Student.</span></h1>
+        <p>Welcome to my Personal Personal Website. </p>
+        
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./Images/janice 2.jpg" alt="profile">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>    I’m Janice R. Calope 21 years of age currently living in Baucan Norte, Balilihan, Bohol. 
+                        I’m a 3rd year student taking up Bachelor of Science in Computer Science at Bohol Island 
+                        State University Balilihan Campus. I am enthusiastic about my studies and take great pride 
+                        in achieving what I can. I am excited to do further studies 
+                        and to be able to put my learning into a real practice situation.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                        <p class="tab-links" onclick="opentab('education')"> Education</p>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>C Programming, Java</li>
+                            <li><span>Photo and Video Editing</span><br>Photoshop</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Baucan Norte Elementary School  - 2015</span><br>Balilihan, Bohol</li>
+                            <li><span>Junior High School: Congressman Pablo Malasarte National High School  - 2019</span><br>Cabad, Balilihan, Bohol</li>
+                            <li><span>Senior High School: Congressman Pablo Malasarte National High School  - 2021</span><br>Cabad, Balilihan, Bohol</li>
+                            <li><span>Tertiary: Bohol Island State University Balilihan Campus   - 2024</span><br>Magsija, Balilihan, Bohol</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./Images/psych.jpg" alt="work">
+                    <div class="layer">
+                        <h3>Psych Health App</h3>
+                        <p>Android Studio</p>
+                        <div class="layer-btn">
+                            <a href="https://sahadcmd.github.io/Portfolio/" target="_blank"><i class='bx bx-link-external'></i></a>
+                            <a href="https://github.com/sahadcmd/Portfolio" target="_blank"><i class='bx bx-code-alt'></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./Images/coffee.jpg" alt="work">
+                    <div class="layer">
+                        <h3>Coffee Shop Menu Management System  </h3>
+                        <p>JAVA</p>
+                    </div>
+                </div>
+                
+                <div class="work">
+                    <img src="./Images/higala.jpg" alt="work">
+                    <div class="layer">
+                        <h3>Graphic Design</h3>
+                        <p>Photoshop</p>
+                        
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./Images/arduino.jpg" alt="work">
+                    <div class="layer">
+                        <h3>JUMP MAN GAME</h3>
+                        <p>Arduino</p>
+                        
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./Images/love.jpg" alt="work">
+                    <div class="layer">
+                        <h3>Love Story by Taylor Swift</h3>
+                        <p>Animation Video</p>
+                        
+                    </div>
+                </div>
+                
+                
+            
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <a>calopejanice966@gmail.com</a>
+                    <p>0930 262 3780</p>
+                    
+                    <a href="#"  class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©Copyright 2023 <br>Janice Calope - Portfolio Website</p>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
